@@ -1,0 +1,12 @@
+{
+  "id": "ORD0001",
+  "date": "2026-09-03",
+  "status": "completed",
+  "items": [
+    {
+      "productId": "P001",
+      "quantity": 2,
+      "unitPrice": 2400
+    }
+  ]
+}

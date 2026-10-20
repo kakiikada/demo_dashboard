@@ -1,184 +1,177 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+/* main */
+.layout {
+  display: flex;
+}
+.layout_left {
+  width: 25%;
+  min-height: 100svh;
+}
+.layout_right {
+  width: 80%;
+}
+.section {
+  padding: var(--space_s);
+}
+.title {
+  font-size: 1.2rem;
+}
+.defaultBox {
+  padding: var(--space_s);
+  background-color: var(--color_bg);
+  border-radius: 0.25rem;
+}
+.btn {
+    background-color: var(--color_main);
+    color: var(--color_bg);
+    padding: var(--space_ss) var(--space_s);
+    border-radius: 0.25rem;
+    transition: .2s;
+    &:hover{
+      background-color: var(--color_main-light);
+    }
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
+/* sidebar */
+.sidebar {
+  background-color: var(--color_main);
+  color: var(--color_bg);
+  min-height: 100svh;
+  height: 100%;
+  .sidebar_title {
     position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
+    font-size: 1.5rem;
+    padding: var(--space_s);
+    text-indent: 1rem;
+    span {
+      display: inline-block;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0.5rem;
+      height: calc(100% - 2rem);
+      left: 1rem;
+      border-radius: 0.25rem;
+      background-color: var(--color_accent);
     }
   }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
+  .sidebar_list {
+    margin-top: var(--space_m);
+    li button {
+      padding: var(--space_m);
       width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
+      border-left: 0.5rem solid var(--color_main);
+      &.active {
+        background-color: var(--color_main-light);
+        border-left: 0.5rem solid var(--color_accent);
+      }
     }
   }
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
+/* header */
+.header {
+  padding: var(--space_s);
+  .header_layout {
+    display: flex;
+    justify-content: space-between;
+    .header_layout_left {}
+    .header_layout_right {}
+  }
+  .header_title {
+    font-size: 1.5rem;
+  }
+  .header_subTitle {
+    font-size: 0.75rem;
+  }
+  .header_list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .header_search {
+    display: flex;
+    button {
+      font-size: 1.25rem;
+      background-color: var(--color_bg);
+      padding: var(--space_ss);
+      border-radius: 0.25rem 0 0 0.25rem;
+      width: 2rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    input {
+      border-radius:  0 0.25rem 0.25rem 0;
+    }
+  }
+  .header_notice button, .header_user button {
+    background-color: var(--color_bg);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    color: var(--color_main);
+    overflow: hidden;
+    position: relative;
+    i {
+        position: absolute;
+        width: 2rem;
+        text-align: center;
+    }
+  }
+  .header_notice {
+    i {
+      font-size: 1.25rem;
+      top: 0.125rem;
+    }
+  }
+  .header_user {
+    i {
+      font-size: 2rem;
+      top: -0.25rem;
+    }
+  }
+}
+/* ダッシュボード */
+.dashboard_list {
+  display: flex;
+  gap: 0.5rem;
+
+  li {
+    line-height: 1;
+    min-width: 6rem;
+    padding: var(--space_s);
+    background-color: var(--color_bg);
+    border-radius: 0.25rem;
+    h2 {
+      font-size: 0.75rem;
+    }
+    p {
+      font-size: 2rem;
+      text-align: right;
+      small {
+        font-size: 1rem;
+      }
+    }
   }
 }
 
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+.dashboard_chart {
+  min-height: 180px;
+}
+/* 商品管理 */
+.products_input {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  li {
+    display: flex;
+    align-items: center;
+    p {
+      flex-shrink: 0;
+    }
   }
 }
+
+/* 注文管理 */
+
