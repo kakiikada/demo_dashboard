@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-export default function Orders() {
+function Orders() {
   return (
     <div className="orders">
       <h2 className="title">注文数</ h2>
@@ -19,29 +19,32 @@ export default function Orders() {
           <li><button className="btn">検索</button></li>
       </ul>
         <table className="space-s">
-          <tr>
-            <th>注文番号</th>
-            <th>注文日</th>
-            <th>商品数</th>
-            <th>合計金額</th>
-            <th>状況</th>
-          </tr>
-          <tr>
-            <td>注文番号</td>
-            <td>2026/10/10</td>
-            <td>3</td>
-            <td>20000</td>
-            <td>販売中</td>
-          </tr>
-          <tr>
-            <td>注文番号</td>
-            <td>2026/10/10</td>
-            <td>3</td>
-            <td>20000</td>
-            <td>販売中</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>注文番号</th>
+              <th>注文日</th>
+              <th>商品数</th>
+              <th>合計金額</th>
+              <th>状況</th>
+            </tr>
+            <tr>
+              <td>注文番号</td>
+              <td>2026/10/10</td>
+              <td>3</td>
+              <td>20000</td>
+              <td>販売中</td>
+            </tr>
+            <tr>
+              <td>注文番号</td>
+              <td>2026/10/10</td>
+              <td>3</td>
+              <td>20000</td>
+              <td>販売中</td>
+            </tr>
+          </tbody>
         </table>
       </section>
     </div>
   )
 }
+export default Orders;

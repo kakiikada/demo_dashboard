@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-export default function Dashboard() {
+function Dashboard() {
   return (
     <div className="dashboard">
       <h2 className="title">売上合計</h2>
@@ -28,3 +28,4 @@ export default function Dashboard() {
     </div>
   )
 }
+export default Dashboard;

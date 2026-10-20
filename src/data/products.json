@@ -1,8 +1,402 @@
-{
-  "id": "P001",
-  "name": "ハーブティーセット",
-  "category": "食品",
-  "price": 2400,
-  "stock": 18,
-  "status": "active"
-}
+[
+  {
+    "id": "P001",
+    "name": "ハーブティーセット",
+    "category": "食品",
+    "price": 2400,
+    "stock": 18,
+    "status": "active"
+  },
+  {
+    "id": "P002",
+    "name": "ブレンドコーヒー",
+    "category": "食品",
+    "price": 3200,
+    "stock": 20,
+    "status": "active"
+  },
+  {
+    "id": "P003",
+    "name": "ドリップコーヒー10袋",
+    "category": "食品",
+    "price": 1200,
+    "stock": 45,
+    "status": "active"
+  },
+  {
+    "id": "P004",
+    "name": "フルーツシロップ",
+    "category": "食品",
+    "price": 1800,
+    "stock": 8,
+    "status": "active"
+  },
+  {
+    "id": "P005",
+    "name": "焼き菓子アソート",
+    "category": "食品",
+    "price": 2800,
+    "stock": 12,
+    "status": "active"
+  },
+  {
+    "id": "P006",
+    "name": "季節のジャムセット",
+    "category": "食品",
+    "price": 1600,
+    "stock": 0,
+    "status": "active"
+  },
+  {
+    "id": "P007",
+    "name": "オーガニック紅茶",
+    "category": "食品",
+    "price": 1500,
+    "stock": 32,
+    "status": "active"
+  },
+  {
+    "id": "P008",
+    "name": "コーヒー豆200g",
+    "category": "食品",
+    "price": 1900,
+    "stock": 5,
+    "status": "active"
+  },
+  {
+    "id": "P009",
+    "name": "はちみつギフト",
+    "category": "食品",
+    "price": 3600,
+    "stock": 14,
+    "status": "active"
+  },
+  {
+    "id": "P010",
+    "name": "ハーブソルト",
+    "category": "食品",
+    "price": 800,
+    "stock": 27,
+    "status": "inactive"
+  },
+  {
+    "id": "P011",
+    "name": "ウッドトレイ",
+    "category": "インテリア",
+    "price": 1800,
+    "stock": 7,
+    "status": "active"
+  },
+  {
+    "id": "P012",
+    "name": "ガラスフラワーベース",
+    "category": "インテリア",
+    "price": 3200,
+    "stock": 11,
+    "status": "active"
+  },
+  {
+    "id": "P013",
+    "name": "アロマキャンドル",
+    "category": "インテリア",
+    "price": 2200,
+    "stock": 24,
+    "status": "active"
+  },
+  {
+    "id": "P014",
+    "name": "リネンクッションカバー",
+    "category": "インテリア",
+    "price": 2800,
+    "stock": 9,
+    "status": "active"
+  },
+  {
+    "id": "P015",
+    "name": "木製フォトフレーム",
+    "category": "インテリア",
+    "price": 1400,
+    "stock": 31,
+    "status": "active"
+  },
+  {
+    "id": "P016",
+    "name": "テーブルランプ",
+    "category": "インテリア",
+    "price": 4800,
+    "stock": 4,
+    "status": "active"
+  },
+  {
+    "id": "P017",
+    "name": "ミニ観葉植物",
+    "category": "インテリア",
+    "price": 1200,
+    "stock": 16,
+    "status": "active"
+  },
+  {
+    "id": "P018",
+    "name": "陶器の花瓶",
+    "category": "インテリア",
+    "price": 3500,
+    "stock": 6,
+    "status": "inactive"
+  },
+  {
+    "id": "P019",
+    "name": "コットンブランケット",
+    "category": "インテリア",
+    "price": 4200,
+    "stock": 13,
+    "status": "active"
+  },
+  {
+    "id": "P020",
+    "name": "ルームディフューザー",
+    "category": "インテリア",
+    "price": 2600,
+    "stock": 22,
+    "status": "active"
+  },
+  {
+    "id": "P021",
+    "name": "ノートセット",
+    "category": "文房具",
+    "price": 1200,
+    "stock": 32,
+    "status": "active"
+  },
+  {
+    "id": "P022",
+    "name": "万年筆",
+    "category": "文房具",
+    "price": 4500,
+    "stock": 10,
+    "status": "active"
+  },
+  {
+    "id": "P023",
+    "name": "レターセット",
+    "category": "文房具",
+    "price": 700,
+    "stock": 38,
+    "status": "active"
+  },
+  {
+    "id": "P024",
+    "name": "本革ペンケース",
+    "category": "文房具",
+    "price": 3000,
+    "stock": 15,
+    "status": "active"
+  },
+  {
+    "id": "P025",
+    "name": "卓上カレンダー",
+    "category": "文房具",
+    "price": 900,
+    "stock": 0,
+    "status": "active"
+  },
+  {
+    "id": "P026",
+    "name": "マスキングテープセット",
+    "category": "文房具",
+    "price": 600,
+    "stock": 52,
+    "status": "active"
+  },
+  {
+    "id": "P027",
+    "name": "革のブックカバー",
+    "category": "文房具",
+    "price": 3800,
+    "stock": 3,
+    "status": "active"
+  },
+  {
+    "id": "P028",
+    "name": "デザイン付箋セット",
+    "category": "文房具",
+    "price": 500,
+    "stock": 41,
+    "status": "active"
+  },
+  {
+    "id": "P029",
+    "name": "ガラスペン",
+    "category": "文房具",
+    "price": 2500,
+    "stock": 8,
+    "status": "inactive"
+  },
+  {
+    "id": "P030",
+    "name": "水彩スケッチブック",
+    "category": "文房具",
+    "price": 1600,
+    "stock": 19,
+    "status": "active"
+  },
+  {
+    "id": "P031",
+    "name": "帆布トートバッグ",
+    "category": "雑貨",
+    "price": 2900,
+    "stock": 17,
+    "status": "active"
+  },
+  {
+    "id": "P032",
+    "name": "刺繍ハンカチ",
+    "category": "雑貨",
+    "price": 1000,
+    "stock": 26,
+    "status": "active"
+  },
+  {
+    "id": "P033",
+    "name": "折りたたみ傘",
+    "category": "雑貨",
+    "price": 2400,
+    "stock": 12,
+    "status": "active"
+  },
+  {
+    "id": "P034",
+    "name": "レザーキーケース",
+    "category": "雑貨",
+    "price": 3300,
+    "stock": 5,
+    "status": "active"
+  },
+  {
+    "id": "P035",
+    "name": "ステンレスボトル",
+    "category": "雑貨",
+    "price": 2100,
+    "stock": 29,
+    "status": "active"
+  },
+  {
+    "id": "P036",
+    "name": "エコバッグ",
+    "category": "雑貨",
+    "price": 800,
+    "stock": 44,
+    "status": "active"
+  },
+  {
+    "id": "P037",
+    "name": "アクセサリーポーチ",
+    "category": "雑貨",
+    "price": 1700,
+    "stock": 2,
+    "status": "active"
+  },
+  {
+    "id": "P038",
+    "name": "真鍮キーホルダー",
+    "category": "雑貨",
+    "price": 1300,
+    "stock": 21,
+    "status": "inactive"
+  },
+  {
+    "id": "P039",
+    "name": "晴雨兼用日傘",
+    "category": "雑貨",
+    "price": 3900,
+    "stock": 9,
+    "status": "active"
+  },
+  {
+    "id": "P040",
+    "name": "トラベルポーチセット",
+    "category": "雑貨",
+    "price": 2600,
+    "stock": 14,
+    "status": "active"
+  },
+  {
+    "id": "P041",
+    "name": "ハンドクリームセット",
+    "category": "美容",
+    "price": 1800,
+    "stock": 23,
+    "status": "active"
+  },
+  {
+    "id": "P042",
+    "name": "ボタニカル石けん",
+    "category": "美容",
+    "price": 900,
+    "stock": 35,
+    "status": "active"
+  },
+  {
+    "id": "P043",
+    "name": "フェイスケアセット",
+    "category": "美容",
+    "price": 4800,
+    "stock": 6,
+    "status": "active"
+  },
+  {
+    "id": "P044",
+    "name": "バスソルトセット",
+    "category": "美容",
+    "price": 1500,
+    "stock": 18,
+    "status": "active"
+  },
+  {
+    "id": "P045",
+    "name": "ヘアブラシ",
+    "category": "美容",
+    "price": 2200,
+    "stock": 10,
+    "status": "active"
+  },
+  {
+    "id": "P046",
+    "name": "ネイルケアセット",
+    "category": "美容",
+    "price": 1300,
+    "stock": 0,
+    "status": "active"
+  },
+  {
+    "id": "P047",
+    "name": "シルクアイマスク",
+    "category": "美容",
+    "price": 2800,
+    "stock": 7,
+    "status": "active"
+  },
+  {
+    "id": "P048",
+    "name": "アロマハンドソープ",
+    "category": "美容",
+    "price": 1100,
+    "stock": 28,
+    "status": "active"
+  },
+  {
+    "id": "P049",
+    "name": "ボディケアオイル",
+    "category": "美容",
+    "price": 2500,
+    "stock": 4,
+    "status": "inactive"
+  },
+  {
+    "id": "P050",
+    "name": "リップバームセット",
+    "category": "美容",
+    "price": 1400,
+    "stock": 16,
+    "status": "active"
+  }
+]

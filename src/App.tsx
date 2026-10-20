@@ -5,34 +5,44 @@ import Sidebar from './components/layout/Sidebar.tsx'
 import Dashboard from './components/page/Dashboard.tsx'
 import Products from './components/page/Products.tsx'
 import Orders from './components/page/Orders.tsx'
-// import reactLogo from './assets/react.svg'
 import './styles/App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+type Page = "dashboard" | "products" | "orders";
 
+function App() {
+  const [activePage, setActivePage] =
+    useState<Page>("dashboard");
   return (
     <>
     <main>
       <div className="layout">
         <div className="layout_left">
-          <Sidebar />
+          <Sidebar
+            activePage={activePage}
+            setActivePage={setActivePage}
+          />
         </div>
         <div className="layout_right">
-          <Header />
+          <Header activePage={activePage} />
           <div className="contents">
+            {/* ダッシュボード */}
+            {activePage === "dashboard" && 
             <section className="section">
-              {/* ダッシュボード */}
               <Dashboard />
             </section>
+            }
+            {/* 商品管理 */}
+            {activePage === "products" && 
             <section className="section">
-              {/* 商品管理 */}
               <Products />
             </section>
+            }
+            {/* 注文管理 */}
+            {activePage === "orders" && 
             <section className="section">
-              {/* 注文管理 */}
               <Orders />
             </section>
+            }
           </div>
         </div>
       </div>
