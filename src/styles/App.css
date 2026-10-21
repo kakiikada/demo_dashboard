@@ -15,10 +15,22 @@
 .title {
   font-size: 1.2rem;
 }
-.defaultBox {
+.defaultBox, .defaultBox-bg2 {
   padding: var(--space_s);
   background-color: var(--color_bg);
   border-radius: 0.25rem;
+  .defaultBox_title {
+    background-color: var(--color_main);
+    color: var(--color_bg);
+    padding: var(--space_ss) var(--space_s);
+    margin: calc(var(--space_s) * -1) ;
+    margin-bottom: 0;
+    border-radius: 0.25rem 0.25rem 0 0;
+
+  }
+}
+.defaultBox-bg2 {
+  background-color: var(--color_base-light);
 }
 .btn {
     background-color: var(--color_main);
@@ -30,7 +42,29 @@
       background-color: var(--color_main-light);
     }
 }
-
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  .pagination_next, .pagination_prev, .pagination_current {
+    padding: var(--space_ss) var(--space_s);
+    border-radius: 0.25rem;
+    transition: .2s;
+  }
+  .pagination_next, .pagination_prev {
+    color: var(--color_bg);
+    background-color: var(--color_main);
+    &.disabled {
+      background-color: #888;
+    }
+    &:not(.disabled):hover {
+      background-color: var(--color_main-light);
+    }
+  }
+  .pagination_current {
+    color: var(--color_main);
+    background-color: var(--color_bg);
+  }
+}
 /* sidebar */
 .sidebar {
   background-color: var(--color_main);
@@ -164,7 +198,7 @@
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  li {
+  .products_input_item {    
     display: flex;
     align-items: center;
     p {
@@ -172,6 +206,22 @@
     }
   }
 }
+.products_sortBox {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
 
 /* 注文管理 */
-
+.orders_input {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  .orders_input_item {    
+    display: flex;
+    align-items: center;
+    p {
+      flex-shrink: 0;
+    }
+  }
+}
