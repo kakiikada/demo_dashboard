@@ -22,7 +22,7 @@ function Sidebar({
               onClick={() =>{
                 setActivePage("dashboard");
                 setIsOpen(false);
-              }}>Home
+              }}>ダッシュボード
             </button></li>
             <li><button
               className={activePage === "products" ? "active" : ""}

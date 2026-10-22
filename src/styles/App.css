@@ -7,7 +7,7 @@
   }
 }
 .layout_left {
-  width: 25%;
+  width: 16rem;
   min-height: 100svh;
   z-index: 1000;
   @media screen and (max-width: 1023px) {
@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .defaultBox {
-  padding: var(--space_s);
+  padding: var(--space_m);
   background-color: var(--color_bg);
   border-radius: 0.25rem;
   .defaultBox_title {
@@ -90,17 +90,15 @@
   .sidebar_title {
     position: relative;
     font-size: 1.5rem;
-    padding: var(--space_m);
-    text-indent: 2.5rem;
+    padding: var(--space_m) var(--space_s);
+    padding-left: 4.5rem;
     @media screen and (max-width: 1023px) {
-      text-indent: 3.5rem;
+      padding-left: 5.5rem;
     }
     span {
       display: block;
       font-size: 0.875rem;
-      text-indent: 2.625rem;
       @media screen and (max-width: 1023px) {
-        text-indent: 3.625rem;
       }
     }
     &::before {
@@ -120,7 +118,7 @@
   }
   .sidebar_list {
     li button {
-      padding: var(--space_m);
+      padding: var(--space_m) var(--space_s);
       width: 100%;
       border-left: 0.5rem solid var(--color_main);
       &.active {
@@ -135,7 +133,8 @@
 .header {
   padding: var(--space_s);
   .header_title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: bold;
   }
   .header_subTitle {
     font-size: 0.75rem;
@@ -148,31 +147,52 @@
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
-    
     li {
       line-height: 1;
       word-break: break-all;
-      min-width: 6rem;
-      padding: var(--space_s);
+      width: calc(25% - (1.5rem / 4));
+      max-width: 12rem;
+      padding: var(--space_m);
       background-color: var(--color_bg);
       border-radius: 0.25rem;
-      @media screen and (max-width: 1023px) {
+      @media screen and (max-width: 762px) {
         width: calc(50% - 0.25rem);
+        max-width: none;
       }
-      
-      h2 {
-        font-size: 0.75rem;
+      .dashboard_cardList_title {
+        position: relative;
+        padding-left: 1.125rem;
+        font-weight: bold;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: calc(50% - 0.375rem);
+          height: 0.875rem;
+          width: 0.875rem;
+          background-color: var(--color_main);
+          border-radius: 0.25rem;
+        }
       }
       .dashboard_cardList_data {
         font-size: 2rem;
-        margin-top: var(--space_ss);
+        margin-top: var(--space_s);
+        padding-bottom: var(--space_s);
+        @media screen and (max-width: 1023px) {
+          font-size: 1.5rem;
+        }
         small {
           font-size: 1rem;
+          @media screen and (max-width: 1023px) {
+            font-size: 1rem;
+          }
         }
       }
-      p {
+      .dashboard_cardList_text {
         font-size: 0.75rem;
-        margin-top: var(--space_s);
+        margin-top: var(--space_ss);
+        color: var(--color_text-light);
       }
     }
   }
@@ -196,6 +216,10 @@
         width: 100%
       }
     }
+  }
+  .dashboard_title {
+    padding-bottom: var(--space_m);
+    font-size: 1.2rem;
   }
 }
 /* グラフ */
