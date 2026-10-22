@@ -74,7 +74,6 @@ function Orders() {
   }, [searchId, searchStatus, sortOrder]);
   return (
     <div className="orders">
-      <h2 className="title">注文数</ h2>
       <section>
         <ul className="orders_input">
           <li>

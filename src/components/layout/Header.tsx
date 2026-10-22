@@ -20,22 +20,8 @@ function Header({ activePage }: HeaderProps) {
 
   return (
     <header className="header">
-      <div className="header_layout">
-        <div className="header_layout_left">
-            <h2 className="header_title">{titles[activePage]}</h2>
-            <p className="header_subTitle">{text[activePage]}</p>
-        </div>
-        <div className="header-layout_right">
-            <ul className="header_list">
-                <li className="header_search">
-                    <button><i className="ri-search-line"></i></button>
-                    <input type="text" placeholder="" />
-                </li>
-                <li className="header_notice"><button><i className="ri-notification-2-fill"></i></button></li>
-                <li className="header_user"><button><i className="ri-user-fill"></i></button></li>
-            </ul>
-        </div>
-      </div>
+      <h2 className="header_title">{titles[activePage]}</h2>
+      <p className="header_subTitle">{text[activePage]}</p>
     </header>
   )
 }

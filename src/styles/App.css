@@ -15,7 +15,7 @@
 .title {
   font-size: 1.2rem;
 }
-.defaultBox, .defaultBox-bg2 {
+.defaultBox {
   padding: var(--space_s);
   background-color: var(--color_bg);
   border-radius: 0.25rem;
@@ -26,11 +26,7 @@
     margin: calc(var(--space_s) * -1) ;
     margin-bottom: 0;
     border-radius: 0.25rem 0.25rem 0 0;
-
   }
-}
-.defaultBox-bg2 {
-  background-color: var(--color_base-light);
 }
 .btn {
     background-color: var(--color_main);
@@ -106,106 +102,72 @@
 /* header */
 .header {
   padding: var(--space_s);
-  .header_layout {
-    display: flex;
-    justify-content: space-between;
-    .header_layout_left {}
-    .header_layout_right {}
-  }
   .header_title {
     font-size: 1.5rem;
   }
   .header_subTitle {
     font-size: 0.75rem;
   }
-  .header_list {
+}
+/* ダッシュボード */
+.dashboard {
+  .dashboard_cardList {
     display: flex;
-    align-items: center;
     gap: 0.5rem;
-  }
-  .header_search {
-    display: flex;
-    button {
-      font-size: 1.25rem;
+    li {
+      line-height: 1;
+      min-width: 6rem;
+      padding: var(--space_s);
       background-color: var(--color_bg);
-      padding: var(--space_ss);
-      border-radius: 0.25rem 0 0 0.25rem;
-      width: 2rem;
-      text-align: center;
-      flex-shrink: 0;
-    }
-    input {
-      border-radius:  0 0.25rem 0.25rem 0;
-    }
-  }
-  .header_notice button, .header_user button {
-    background-color: var(--color_bg);
-    height: 2rem;
-    width: 2rem;
-    border-radius: 1rem;
-    position: relative;
-    color: var(--color_main);
-    overflow: hidden;
-    position: relative;
-    i {
-        position: absolute;
-        width: 2rem;
-        text-align: center;
-    }
-  }
-  .header_notice {
-    i {
-      font-size: 1.25rem;
-      top: 0.125rem;
-    }
-  }
-  .header_user {
-    i {
-      font-size: 2rem;
-      top: -0.25rem;
+      border-radius: 0.25rem;
+      h2 {
+        font-size: 0.75rem;
+      }
+      .dashboard_cardList_data {
+        font-size: 2rem;
+        margin-top: var(--space_ss);
+        small {
+          font-size: 1rem;
+        }
+      }
+      p {
+        font-size: 0.75rem;
+        margin-top: var(--space_s);
+      }
     }
   }
 }
-/* ダッシュボード */
-.dashboard_cardList {
+/* グラフ */
+.graphBtnList {
   display: flex;
   gap: 0.5rem;
-  li {
-    line-height: 1;
-    min-width: 6rem;
-    padding: var(--space_s);
-    background-color: var(--color_bg);
+  button {
+    background-color: var(--color_main);
+    color: var(--color_bg);
+    padding: var(--space_ss) var(--space_s);
     border-radius: 0.25rem;
-    h2 {
-      font-size: 0.75rem;
+    transition: .2s;
+    &:hover {
+      background-color: var(--color_main-light);
     }
-    .dashboard_cardList_data {
-      font-size: 2rem;
-      margin-top: var(--space_ss);
-      small {
-        font-size: 1rem;
-      }
-    }
-    p {
-      font-size: 0.75rem;
-      margin-top: var(--space_s);
+    &.active, &.active:hover {
+      background-color: var(--color_accent);
     }
   }
 }
 
-.dashboard_chart {
-  min-height: 180px;
-}
 /* 商品管理 */
-.products_input {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  .products_input_item {    
+.products {
+  .products_input {
     display: flex;
-    align-items: center;
-    p {
-      flex-shrink: 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    .products_input_item {    
+      display: flex;
+      align-items: center;
+      p {
+        flex-shrink: 0;
+      }
     }
   }
 }

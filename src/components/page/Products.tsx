@@ -10,7 +10,7 @@ type Product = {
   status: "active" | "inactive";
 };
 
-type SortKey = "none" | "name" | "price" | "stock";
+type SortKey = "none" | "id" | "name" | "price" | "stock";
 type SortOrder = "asc" | "desc";
 type StockFilter = "all" | "inStock" | "lowStock" | "outOfStock";
 
@@ -25,7 +25,7 @@ function Products() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [stockFilter, setStockFilter] = useState<StockFilter>("all");
   // ソート
-  const [sortKey, setSortKey] = useState<SortKey>("none");
+  const [sortKey, setSortKey] = useState<SortKey>("id");
   const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
   // 処理
   const filteredProducts = productsData.filter((item) => {
@@ -49,6 +49,11 @@ function Products() {
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (sortKey === "none") {
       return 0;
+    }
+    if (sortKey === "id") {
+      return sortOrder === "asc"
+        ? a.id.localeCompare(b.id)
+        : b.id.localeCompare(a.id);
     }
     if (sortKey === "name") {
       return sortOrder === "asc"
@@ -82,60 +87,8 @@ function Products() {
   }, [sortKey, searchWord, selectedCategory, stockFilter, sortOrder]);
   return (
     <div className="products">
-      {/* 項目追加 */}
-      <div className="defaultBox-bg2">
-        <p className="defaultBox_title">商品追加</p>
-        <ul className="products_input space-s">
-          <li>
-            <div className="products_input_item">
-              <p>商品名：</p>
-              <input type="text" placeholder="" />
-            </div>
-          </li>
-          <li>
-            <div className="products_input_item">
-              <p>カテゴリ：</p>
-              <select defaultValue="">
-                <option value="all">すべてのカテゴリ</option>
-                {categorize.map((category) => (
-                  <option value={category} key={category}>
-                    {category}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </li>
-          <li>
-            <div className="products_input_item">
-              <p>ステータス：</p>
-              <select
-                value={sortKey}
-                onChange={(e) => setSortKey(e.target.value as SortKey)}
-              >
-                <option value="none">登録順</option>
-                <option value="name">商品名</option>
-                <option value="price">価格</option>
-                <option value="stock">在庫数</option>
-              </select>
-            </div>
-          </li>
-          <li>
-            <div className="products_input_item">
-              <p>価格：</p>
-              <input type="number" placeholder="" />
-            </div>
-          </li>
-          <li>
-            <div className="products_input_item">
-              <p>在庫数：</p>
-              <input type="number" placeholder="" />
-            </div>
-          </li>
-          <li><button className="btn">追加</button></li>
-        </ul>
-      </div>
         {/* 絞り込み */}
-      <div className="products_input space-s">
+      <div className="products_input">
         <div className="products_input_item">
           <p>商品名：</p>
           <input
@@ -186,7 +139,7 @@ function Products() {
                 value={sortKey}
                 onChange={(e) => setSortKey(e.target.value as SortKey)}
               >
-                <option value="none">登録順</option>
+                <option value="id">登録順</option>
                 <option value="name">商品名</option>
                 <option value="price">価格</option>
                 <option value="stock">在庫数</option>

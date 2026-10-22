@@ -1,9 +1,10 @@
 
 import { useState } from "react";
+import SalesChart from "../parts/SalesChart.tsx";
+import CategorySalesChart from "../parts/CategorySalesChart.tsx";
+import OrderStatusChart from "../parts/OrderStatusChart.tsx";
 import ordersData from "../../data/orders.json";
 import productsData from "../../data/products.json";
-
-
 
 // キャンセル以外の注文を取り出す
 const validOrders = ordersData.filter(
@@ -29,7 +30,6 @@ const totalQuantity = validOrders.reduce((total, order) => {
 function Dashboard() {
   return (
     <div className="dashboard">
-      <h2 className="title">売上合計</h2>
       <div>
         <ul className="dashboard_cardList">
           <li>
@@ -53,13 +53,19 @@ function Dashboard() {
       <section className="space-s">
         <h2>売上推移</h2>
         <div className="defaultBox">
-          <div className="dashboard_chart"></div>
+          <SalesChart />
         </div>
       </section>
       <section className="space-s">
         <h2>カテゴリ別売上</h2>
         <div className="defaultBox">
-          <div className="dashboard_chart"></div>
+          <CategorySalesChart />
+        </div>
+      </section>
+      <section className="space-s">
+        <h2>注文ステータス</h2>
+        <div className="defaultBox">
+          <OrderStatusChart />
         </div>
       </section>
     </div>
