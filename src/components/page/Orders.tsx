@@ -121,7 +121,8 @@ function Orders() {
             </div>
           </li>
         </ul>
-        <table className="space-s">
+        <p className="orders_tortal space-s">全 {sortedOrders.length} 件の商品</p>
+        <table>
           <tbody>
             <tr>
               <th>注文番号</th>

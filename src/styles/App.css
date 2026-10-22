@@ -53,11 +53,11 @@
   .pagination_next, .pagination_prev {
     color: var(--color_bg);
     background-color: var(--color_main);
-    &.disabled {
-      background-color: #888;
-    }
-    &:not(.disabled):hover {
+    &:hover {
       background-color: var(--color_main-light);
+    }
+    &:disabled, &:disabled:hover {
+      background-color: #ccc;
     }
   }
   .pagination_current {
@@ -167,10 +167,9 @@
   }
 }
 /* ダッシュボード */
-.dashboard_list {
+.dashboard_cardList {
   display: flex;
   gap: 0.5rem;
-
   li {
     line-height: 1;
     min-width: 6rem;
@@ -180,12 +179,16 @@
     h2 {
       font-size: 0.75rem;
     }
-    p {
+    .dashboard_cardList_data {
       font-size: 2rem;
-      text-align: right;
+      margin-top: var(--space_ss);
       small {
         font-size: 1rem;
       }
+    }
+    p {
+      font-size: 0.75rem;
+      margin-top: var(--space_s);
     }
   }
 }
@@ -213,15 +216,20 @@
 }
 
 /* 注文管理 */
-.orders_input {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  .orders_input_item {    
+.orders {
+  .orders_input {
     display: flex;
-    align-items: center;
-    p {
-      flex-shrink: 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    .orders_input_item {    
+      display: flex;
+      align-items: center;
+      p {
+        flex-shrink: 0;
+      }
     }
+  }
+  .orders_tortal {
+    text-align: right;
   }
 }
