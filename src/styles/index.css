@@ -13,6 +13,11 @@
   --space_m: 2rem;
   --space_l: 3rem;
   --shadow: 0.125rem 0.125rem 0.5rem 0 rgba(56, 73, 150, 0.25);
+  @media screen and (max-width: 1023px) {
+  --space_ss: 0.25rem;
+  --space_s: 0.5rem;
+  --space_m: 1rem;
+  }
 }
 
 /* SP最小 375、PC最小画面 1024、基準1440px */
@@ -26,6 +31,12 @@
 }
 html, body {
   background-color: var(--color_base);
+}
+body {
+  font-size: 1rem;
+  @media screen and (max-width: 1023px) {
+    font-size: 0.875rem;
+  }
 }
 input[type=text], input[type=number] {
   background-color: var(--color_bg);

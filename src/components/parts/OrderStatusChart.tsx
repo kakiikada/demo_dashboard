@@ -95,7 +95,7 @@ function OrderStatusChartChart() {
                   }
                   fontSize={14}
                 >
-                {`${name} ${percentage}%`}
+                {`${percentage}%`}
                 </text>
               );
             }}

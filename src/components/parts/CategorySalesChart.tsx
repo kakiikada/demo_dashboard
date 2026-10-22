@@ -76,7 +76,7 @@ const categorySales = ordersData
           <Bar
             dataKey="sales"
             name="売上"
-            barSize={50}
+
             radius={[2, 2, 0, 0]}
           >
             {categorySales.map((item) => (

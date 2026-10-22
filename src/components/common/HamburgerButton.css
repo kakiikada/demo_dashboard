@@ -1,0 +1,74 @@
+/* ハンバーガーアイコン */
+.sidebar-icon {
+    display: none;
+    z-index: 10000;
+    @media screen and (max-width: 959px) {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        height: 2rem;
+        width: 2rem;
+        display: block;
+    }
+    .hamburgerButton {
+        top: 0rem;
+        right: 0rem;
+        width: 1.875rem;
+        z-index: 10002;
+        cursor: pointer;
+        position: absolute;
+        aspect-ratio: 1 / 1;
+        .hamburgerButton_navIcon1, .hamburgerButton_navIcon2{
+            top: 0.8125rem;
+            height: 0.25rem;
+            width: 1.875rem;
+            transition: .3s;
+            border-radius: 0.125rem;
+            position: absolute;
+            background-color: #fff;
+        }
+        .hamburgerButton_navIcon1{
+            transform: rotate(0deg);
+            animation: menuIcon-out .3s ease-out forwards;
+            box-shadow: 0 0.625rem 0 #fff, 0 -0.625rem 0 #fff;
+
+        }
+        &.active .hamburgerButton_navIcon1 {
+            transform: rotate(45deg);
+            animation: menuIcon-in .3s ease-out forwards;
+        }
+        &.active .hamburgerButton_navIcon2 {
+            transform: rotate(-45deg);
+            transition-delay: .1s;
+        }
+    }
+}
+/* アイコン開閉 */
+@keyframes menuIcon-in {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 0 0.625rem 0 #fff, 0 -0.625rem 0 #fff;
+    }
+    50% {
+        transform: rotate(0deg);
+        box-shadow: 0 0 0 #fff, 0 0 0 #fff;
+    }
+    100% {
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #fff, 0 0 0 #fff;
+    }
+}
+@keyframes menuIcon-out {
+    0% {
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #fff, 0 0 0 #fff;
+    }
+    50% {
+        transform: rotate(0deg);
+        box-shadow: 0 0 0 #fff, 0 0 0 #fff;
+    }
+    100% {
+        transform: rotate(0deg);
+        box-shadow: 0 0.625rem 0 #fff, 0 -0.625rem 0 #fff;
+    }
+}

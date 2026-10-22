@@ -105,9 +105,11 @@ function Orders() {
               </select>
             </div>
           </li>
-          <li>
-            <div className="orders_input_item">
-            <p>並び順：</p>
+        </ul>
+        <div className="orders_sort space-s">
+          <div className="orders_sort_tortal">
+            <div className="orders_sort_tortal_item">
+              <p>並び順：</p>
               <select
                 value={sortOrder}
                 onChange={(e) => setSortOrder(e.target.value)}
@@ -117,11 +119,11 @@ function Orders() {
                 <option value="priceDesc">合計金額の高い順</option>
                 <option value="priceAsc">合計金額の安い順</option>
               </select>
-            </div>
-          </li>
-        </ul>
-        <p className="orders_tortal space-s">全 {sortedOrders.length} 件の商品</p>
-        <table>
+              </div>
+          </div>
+          <p className="orders_sort_tortal">全 {sortedOrders.length} 件の商品</p>
+        </div>
+        <table className=" space-ss">
           <tbody>
             <tr>
               <th>注文番号</th>

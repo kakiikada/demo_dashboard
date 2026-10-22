@@ -75,7 +75,7 @@ const salesByDate = ordersData
             7日間
         </button>
     </div>
-    <div className="space-s" style={{ width: "100%", height: 300 }}>
+    <div className="space-s" style={{ width: "100%", height: 250 }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={filteredSalesData}>
           <CartesianGrid strokeDasharray="3 3" />

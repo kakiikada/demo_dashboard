@@ -30,44 +30,44 @@ const totalQuantity = validOrders.reduce((total, order) => {
 function Dashboard() {
   return (
     <div className="dashboard">
-      <div>
-        <ul className="dashboard_cardList">
-          <li>
-            <h2>売上合計</h2>
-            <p className="dashboard_cardList_data">&#165;{totalSales.toLocaleString()}</p>
-            <p>売上対象の注文金額の合計</p></li>
-          <li>
-            <h2>注文数</h2>
-            <p className="dashboard_cardList_data">{validOrders.length}<small>件</small></p>
-            <p>対象となる注文の件数</p></li>
-          <li>
-            <h2>平均注文額</h2>
-            <p className="dashboard_cardList_data">&#165;{ averageOrderAmount.toLocaleString() }</p>
-            <p>売上合計 ÷ 注文数</p></li>
-          <li>
-            <h2>販売個数</h2>
-            <p className="dashboard_cardList_data">{totalQuantity}<small>個</small></p>
-            <p>販売対象の数量の合計</p></li>
-        </ul>
+      <ul className="dashboard_cardList">
+        <li>
+          <h2>売上合計</h2>
+          <p className="dashboard_cardList_data">&#165;{totalSales.toLocaleString()}</p>
+          <p>売上対象の注文金額の合計</p></li>
+        <li>
+          <h2>注文数</h2>
+          <p className="dashboard_cardList_data">{validOrders.length}<small>件</small></p>
+          <p>対象となる注文の件数</p></li>
+        <li>
+          <h2>平均注文額</h2>
+          <p className="dashboard_cardList_data">&#165;{ averageOrderAmount.toLocaleString() }</p>
+          <p>売上合計 ÷ 注文数</p></li>
+        <li>
+          <h2>販売個数</h2>
+          <p className="dashboard_cardList_data">{totalQuantity}<small>個</small></p>
+          <p>販売対象の数量の合計</p></li>
+      </ul>
+      <div className="dashboard_contentLayout">
+        <section className="dashboard_contentLayout_content-1 space-m">
+          <h2>売上推移</h2>
+          <div className="defaultBox">
+            <SalesChart />
+          </div>
+        </section>
+        <section className="dashboard_contentLayout_content-2">
+          <h2>カテゴリ別売上</h2>
+          <div className="defaultBox">
+            <CategorySalesChart />
+          </div>
+        </section>
+        <section className="dashboard_contentLayout_content-3">
+          <h2>注文ステータス</h2>
+          <div className="defaultBox">
+            <OrderStatusChart />
+          </div>
+        </section>
       </div>
-      <section className="space-s">
-        <h2>売上推移</h2>
-        <div className="defaultBox">
-          <SalesChart />
-        </div>
-      </section>
-      <section className="space-s">
-        <h2>カテゴリ別売上</h2>
-        <div className="defaultBox">
-          <CategorySalesChart />
-        </div>
-      </section>
-      <section className="space-s">
-        <h2>注文ステータス</h2>
-        <div className="defaultBox">
-          <OrderStatusChart />
-        </div>
-      </section>
     </div>
   )
 }
