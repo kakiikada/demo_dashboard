@@ -141,7 +141,7 @@ function Orders() {
                 return (
                   <tr key={item.id}>
                     <td>{item.id}</td>
-                    <td>{item.orderDate}</td>
+                    <td>{new Date(item.orderDate).toLocaleDateString("ja-JP")}</td>
                     <td>{item.quantity}</td>
                     <td>¥{totalPrice.toLocaleString("ja-JP")}</td>
                     <td>
@@ -166,18 +166,18 @@ function Orders() {
         </table>
         <div className="pagination space-ss">
           {/* ページネーション */}
-          <button className={`pagination_prev ${currentPage === 1 ? "disabled" : ""} `}
+          <button className={`btn ${currentPage === 1 ? "disabled" : ""} `}
             disabled={currentPage === 1}
             onClick={() => setCurrentPage(currentPage - 1)}
           >
             前へ
           </button>
 
-          <span className="pagination_current">
+          <span>
             {currentPage} / {totalPages || 1}
           </span>
 
-          <button className={`pagination_next ${currentPage >= totalPages ? "disabled" : "" } `}
+          <button className={`btn ${currentPage >= totalPages ? "disabled" : "" } `}
             disabled={currentPage >= totalPages}
             onClick={() => setCurrentPage(currentPage + 1)}
           >

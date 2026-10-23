@@ -13,13 +13,22 @@
     .hamburgerButton {
         top: 0rem;
         right: 0rem;
-        width: 1.875rem;
+        width: 2.875rem;
         z-index: 10002;
         cursor: pointer;
         position: absolute;
         aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background-color: var(--color_main);
+        transition: .3s;
+        @media screen and (min-width: 764px) {
+            &:hover {
+                background-color: var(--color_main-light);
+            }
+        }
         .hamburgerButton_navIcon1, .hamburgerButton_navIcon2{
-            top: 0.8125rem;
+            top: 1.3125rem;
+            left: 0.5rem;
             height: 0.25rem;
             width: 1.875rem;
             transition: .3s;

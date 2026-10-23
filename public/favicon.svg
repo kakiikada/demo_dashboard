@@ -1,18 +1,17 @@
 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_315_22)">
-<rect width="50" height="50" fill="white"/>
-<rect x="1" y="41" width="48" height="2" fill="#333333"/>
-<rect x="3" y="2" width="8" height="39" fill="#1111CC"/>
-<rect x="15" y="23" width="8" height="18" fill="#BC11CC"/>
-<rect x="27" y="17" width="8" height="24" fill="#CC1124"/>
-<rect x="39" y="2" width="8" height="39" fill="#CCA711"/>
-<rect x="1" y="45" width="4" height="4" fill="#333333"/>
-<rect x="9" y="45" width="4" height="4" fill="#333333"/>
-<rect x="17" y="45" width="4" height="4" fill="#333333"/>
+<g clip-path="url(#clip0_348_39)">
+<rect width="50" height="50" fill="#27346E"/>
+<rect x="1" y="40" width="48" height="2" fill="white"/>
+<rect x="7" y="15" width="8" height="25" fill="#CC1124"/>
+<rect x="21" y="23" width="8" height="17" fill="#CCA711"/>
+<rect x="35" y="5" width="8" height="35" fill="#9CD64F"/>
+<rect x="7" y="44" width="4" height="4" fill="white"/>
+<rect x="15" y="44" width="4" height="4" fill="white"/>
+<rect x="23" y="44" width="4" height="4" fill="white"/>
 </g>
 <defs>
-<clipPath id="clip0_315_22">
-<rect width="50" height="50" fill="white"/>
+<clipPath id="clip0_348_39">
+<rect width="50" height="50" rx="5" fill="white"/>
 </clipPath>
 </defs>
 </svg>

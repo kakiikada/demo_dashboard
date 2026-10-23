@@ -58,19 +58,19 @@ const salesByDate = ordersData
     <div className="graphBtnList">
         <button
             onClick={() => setPeriod("all")}
-            className={period === "all" ? "active" : ""}
+            className={`btn ${period === "all" ? "active" : ""}`}
         >
             全期間
         </button>
         <button
             onClick={() => setPeriod(30)}
-            className={period === 30 ? "active" : ""}
+            className={`btn ${period === 30 ? "active" : ""}`}
         >
             30日間
         </button>
         <button
             onClick={() => setPeriod(7)}
-            className={period === 7 ? "active" : ""}
+            className={`btn ${period === 7 ? "active" : ""}`}
         >
             7日間
         </button>

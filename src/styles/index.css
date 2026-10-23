@@ -58,10 +58,12 @@ input[type=number] {
   width: 5rem;
 }
 select {
+  cursor: pointer;
+  text-align: left;
   width: 100%;
   max-width: 15rem;
   background-color: var(--color_bg);
-  padding: var(--space_ss);
+  padding: var(--space_ss) var(--space_s);
   border-radius: 0.25rem;
   flex-shrink: 1;
 }

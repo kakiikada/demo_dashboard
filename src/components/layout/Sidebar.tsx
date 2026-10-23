@@ -22,21 +22,21 @@ function Sidebar({
               onClick={() =>{
                 setActivePage("dashboard");
                 setIsOpen(false);
-              }}>ダッシュボード
+              }}>< i class="ri-dashboard-horizontal-fill"></i>ダッシュボード
             </button></li>
             <li><button
               className={activePage === "products" ? "active" : ""}
               onClick={() =>{
                 setActivePage("products");
                 setIsOpen(false);
-              }}>商品管理
+              }}><i class="ri-briefcase-4-fill"></i>商品管理
             </button></li>
             <li><button
               className={activePage === "orders" ? "active" : ""}
               onClick={() =>{
                 setActivePage("orders");
                 setIsOpen(false);
-              }}>注文管理
+              }}><i class="ri-file-list-3-fill"></i>注文管理
             </button></li>
             {/* <li>setting</li> */}
         </ul>

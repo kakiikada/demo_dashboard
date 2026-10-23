@@ -192,18 +192,18 @@ function Products() {
       </table>
       {/* ページネーション */}
       <div className="pagination space-ss">
-        <button className={`pagination_prev ${currentPage === 1 ? "disabled" : ""} `}
+        <button className={`btn ${currentPage === 1 ? "disabled" : ""} `}
           disabled={currentPage === 1}
           onClick={() => setCurrentPage(currentPage - 1)}
         >
           前へ
         </button>
 
-        <span className="pagination_current">
+        <span>
           {currentPage} / {totalPages || 1}
         </span>
 
-        <button className={`pagination_next ${currentPage >= totalPages ? "disabled" : "" } `}
+        <button className={`btn ${currentPage >= totalPages ? "disabled" : "" } `}
           disabled={currentPage >= totalPages}
           onClick={() => setCurrentPage(currentPage + 1)}
         >

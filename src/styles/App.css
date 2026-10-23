@@ -51,32 +51,23 @@
     padding: var(--space_ss) var(--space_s);
     border-radius: 0.25rem;
     transition: .2s;
-    &:hover{
-      background-color: var(--color_main-light);
+    &.active {
+      background-color: var(--color_accent);
+      pointer-events: none;
+    }
+    @media screen and (min-width: 764px) {
+      &:hover{
+        background-color: var(--color_main-light);
+      }
+    }
+    &:disabled, &:disabled:hover {
+      background-color: #ccc;
     }
 }
 .pagination {
   display: flex;
   gap: 0.5rem;
-  .pagination_next, .pagination_prev, .pagination_current {
-    padding: var(--space_ss) var(--space_s);
-    border-radius: 0.25rem;
-    transition: .2s;
-  }
-  .pagination_next, .pagination_prev {
-    color: var(--color_bg);
-    background-color: var(--color_main);
-    &:hover {
-      background-color: var(--color_main-light);
-    }
-    &:disabled, &:disabled:hover {
-      background-color: #ccc;
-    }
-  }
-  .pagination_current {
-    color: var(--color_main);
-    background-color: var(--color_bg);
-  }
+  align-items: center;
 }
 /* sidebar */
 .sidebar {
@@ -109,21 +100,35 @@
       left: 1rem;
       top: calc(50% - 1.375rem);
       border-radius: 0.25rem;
-      background-color: var(--color_bg);
       background-image: url(../../public/favicon.svg);
-      background-size: 90%;
+      background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;
     }
   }
   .sidebar_list {
     li button {
-      padding: var(--space_m) var(--space_s);
+      position: relative;
       width: 100%;
+      padding: var(--space_m) var(--space_s) var(--space_m) var(--space_l);
       border-left: 0.5rem solid var(--color_main);
+      transition: .3s;
+      @media screen and (min-width: 764px) {
+        &:hover {
+          background-color: var(--color_main-light);
+          border-left: 0.5rem solid var(--color_main-light);
+        }
+      }
       &.active {
         background-color: var(--color_main-light);
         border-left: 0.5rem solid var(--color_accent);
+      }
+      i {
+        position: absolute;
+        left: 1rem ;
+        top: 1.25rem;
+        font-size: 1.5rem;
+        vertical-align: middle;
       }
     }
   }
@@ -138,6 +143,7 @@
   }
   .header_subTitle {
     font-size: 0.75rem;
+    color: var(--color_text-light);
   }
 }
 
@@ -226,19 +232,6 @@
 .graphBtnList {
   display: flex;
   gap: 0.5rem;
-  button {
-    background-color: var(--color_main);
-    color: var(--color_bg);
-    padding: var(--space_ss) var(--space_s);
-    border-radius: 0.25rem;
-    transition: .2s;
-    &:hover {
-      background-color: var(--color_main-light);
-    }
-    &.active, &.active:hover {
-      background-color: var(--color_accent);
-    }
-  }
 }
 
 /* 商品管理 */
