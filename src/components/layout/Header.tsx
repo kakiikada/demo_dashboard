@@ -1,6 +1,4 @@
 
-import { useState } from "react";
-
 type Page = "dashboard" | "products" | "orders";
 type HeaderProps = {
   activePage: Page;

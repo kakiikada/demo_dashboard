@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ordersData from "../../data/orders.json";
 
 import {
@@ -89,7 +88,7 @@ function OrderStatusChartChart() {
                   fill={
                     statusColors[
                       Object.entries(statusLabels).find(
-                        ([key, label]) => label === name
+                        ([, label]) => label === name
                       )?.[0] ?? ""
                     ] ?? "#333333"
                   }

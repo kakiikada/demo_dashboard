@@ -27,6 +27,7 @@ function Orders() {
     return matchId && matchStatus;
   });
   const sortedOrders = [...filteredOrders].sort((a, b) => {
+
     if (sortOrder === "dateDesc") {
       return b.orderDate.localeCompare(a.orderDate);
     }
@@ -133,7 +134,7 @@ function Orders() {
               <th>状況</th>
             </tr>
             {sortedOrders.length > 0 ? (
-              paginatedOrders.map((item: Orders) => {
+              paginatedOrders.map((item) => {
                 const product = productsData.find(
                   (product) => product.id === item.productId
                 );

@@ -1,14 +1,6 @@
 
 import { useState, useEffect } from "react";
 import productsData from '../../data/products.json';
-type Product = {
-  id: string;
-  name: string;
-  category: string;
-  price: number;
-  stock: number;
-  status: "active" | "inactive";
-};
 
 type SortKey = "none" | "id" | "name" | "price" | "stock";
 type SortOrder = "asc" | "desc";
@@ -148,7 +140,7 @@ function Products() {
             <div className="products_input_item">
               <select
                 value={sortOrder}
-                onChange={(e) => setSortOrder(e.target.value as sortOrder)}
+                onChange={(e) => setSortOrder(e.target.value as typeof sortOrder)}
               >
                 <option value="asc">昇順</option>
                 <option value="desc">降順</option>
@@ -170,7 +162,7 @@ function Products() {
             <th>ステータス</th>
           </tr>
             {sortedProducts.length > 0 ? (
-              paginatedProducts.map((item: Product) => (
+              paginatedProducts.map((item) => (
                 <tr key={item.id}>
                   <td>{item.name}</td>
                   <td>{item.category}</td>

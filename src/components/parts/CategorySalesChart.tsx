@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ordersData from "../../data/orders.json";
 import productsData from "../../data/products.json";
 

@@ -1,6 +1,3 @@
-
-import { useState } from "react";
-
 type Page = "dashboard" | "products" | "orders";
 type SidebarProps = {
   activePage: Page;
@@ -22,21 +19,21 @@ function Sidebar({
               onClick={() =>{
                 setActivePage("dashboard");
                 setIsOpen(false);
-              }}>< i class="ri-dashboard-horizontal-fill"></i>ダッシュボード
+              }}>< i className="ri-dashboard-horizontal-fill"></i>ダッシュボード
             </button></li>
             <li><button
               className={activePage === "products" ? "active" : ""}
               onClick={() =>{
                 setActivePage("products");
                 setIsOpen(false);
-              }}><i class="ri-briefcase-4-fill"></i>商品管理
+              }}><i className="ri-briefcase-4-fill"></i>商品管理
             </button></li>
             <li><button
               className={activePage === "orders" ? "active" : ""}
               onClick={() =>{
                 setActivePage("orders");
                 setIsOpen(false);
-              }}><i class="ri-file-list-3-fill"></i>注文管理
+              }}><i className="ri-file-list-3-fill"></i>注文管理
             </button></li>
             {/* <li>setting</li> */}
         </ul>

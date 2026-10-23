@@ -91,8 +91,11 @@ const salesByDate = ordersData
           />
           <Tooltip
             labelFormatter={(value) => {
-                const[year,month,day] = value.split("-");
-                return `${Number(year)}/${Number(month)}/${Number(day)}`;
+              if (typeof value !== "string") {
+                return value;
+              }
+              const[year,month,day] = value.split("-");
+              return `${Number(year)}/${Number(month)}/${Number(day)}`;
             }}
             formatter={(value) =>
                 `${Number(value).toLocaleString()}円`
