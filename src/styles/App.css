@@ -69,6 +69,11 @@
   gap: 0.5rem;
   align-items: center;
 }
+.lightText {
+  font-size: 0.75rem;
+  color: var(--color_text-light);
+
+}
 /* sidebar */
 .sidebar {
   z-index: 100;

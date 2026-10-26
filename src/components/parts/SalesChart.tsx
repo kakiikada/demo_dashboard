@@ -140,7 +140,7 @@ const filteredSalesData = (() => {
             直近7日間
         </button>
     </div>
-    <p>※こちらデモサイトのため、データは固定のものを用意し、データ内の日付を自動調整して常に最新が今日になるように変更修正しています。そのため、直近7日のデータは明日になっても同じ形のグラフが表示されます。</p>
+    <p className="lightText">※こちらデモサイトのため、データは固定のものを用意し、データ内の日付を自動調整して常に最新が今日になるように変更修正しています。そのため、直近7日のデータは明日になっても同じ形のグラフが表示されます。</p>
     <div className="space-s" style={{ width: "100%", height: 250 }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={filteredSalesData}>
